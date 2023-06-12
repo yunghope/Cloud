@@ -12,7 +12,8 @@ docker-compose down
 
 
 ---
-projet devops 24 mai
+# Projet 
+### Crée ou prendre un projet en utilisant Docker-compose afin de déployer les différents conteneurs en même temps et manière automatisé
 ##### Images docker - Dealabs-scrapper-app (Sélecteur des meilleurs deals de dealabs)
 #### Création d'un docker-compose.yml
 - Création du docker-compose.yml dans le dossier du projet Dealabs-scrapper-app.
