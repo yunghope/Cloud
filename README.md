@@ -12,12 +12,15 @@ docker-compose down
 
 
 ---
-# Projet 
 ### Crée ou prendre un projet en utilisant Docker-compose afin de déployer les différents conteneurs en même temps et manière automatisé
+
 ##### Images docker - Dealabs-scrapper-app (Sélecteur des meilleurs deals de dealabs)
+
 #### Création d'un docker-compose.yml
+
 - Création du docker-compose.yml dans le dossier du projet Dealabs-scrapper-app.
-```version: '3.7'
+```
+version: '3.7'
 services:
 #Définit les services à exécuter
   app:
@@ -79,7 +82,7 @@ RUN pip install altair vega_datasets
 #Vérification de l'état de santé du conteneur en effectuant une requête HTTP sur l'URL
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-browser.serverAddress 0.0.0.0 > /dev/null 2>&1
+#browser.serverAddress 0.0.0.0 > /dev/null 2>&1
 
 ###################
 
@@ -134,7 +137,7 @@ http {
 `````
 
 docker-compose up -d --build
-
+	
 /home/yung/Documents/dealabs-scraper
 docker images : dealabs-scrapper-app
 
@@ -146,4 +149,6 @@ streamlit run dealabs-scraper/main.py
 docker logs (image)
 
 ------
+
+
 
