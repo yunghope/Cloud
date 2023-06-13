@@ -1,4 +1,4 @@
-#CONTEXTE DU PROJET 
+# CONTEXTE DU PROJET 
 
 Le projet Dealabs-scraper est une application qui permet d'obtenir les meilleurs deals du site Dealabs. Il utilise Docker Compose pour créer un environnement de développement dans un conteneur. Cela facilite le déploiement et l'exécution cohérente de l'application sur différentes machines.
 
