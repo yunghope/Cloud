@@ -38,4 +38,5 @@ HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 ###################
 
-ENTRYPOINT ["streamlit", "run", "dealabs-scraper/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+#ENTRYPOINT ["streamlit", "run", "dealabs-scraper/main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "dealabs-scraper/main.py", "--server.port=${STREAMLIT_SERVER_PORT}", "--server.address=${STREAMLIT_SERVER_ADDRESS}"]
