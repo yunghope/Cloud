@@ -8,6 +8,8 @@ L'utilisation de Docker Compose et Nginx facilite également la mise en place d'
 
 Ce projet est conçu pour une utilisation en local. Pour un déploiement en production, il serait nécessaire de prendre en compte des considérations supplémentaires telles que la sécurité, la mise à l'échelle horizontale et la haute disponibilité.
 
+[Screencast from 06-13-2023 09:46:42 PM.webm](https://github.com/yunghope/Cloud/assets/129152878/d73a3c62-6a44-4507-a4d4-c381edc61c90)
+
 -----
 ### REMINDER
 
