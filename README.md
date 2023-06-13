@@ -1,3 +1,5 @@
+#CONTEXTE DU PROJET 
+
 Le projet Dealabs-scraper est une application qui permet d'obtenir les meilleurs deals du site Dealabs. Il utilise Docker Compose pour créer un environnement de développement dans un conteneur. Cela facilite le déploiement et l'exécution cohérente de l'application sur différentes machines.
 
 Le projet est configuré pour utiliser Nginx comme load balancer et reverse proxy. Nginx permet de distribuer la charge entre plusieurs instances de l'application et d'acheminer les requêtes des utilisateurs vers les différentes instances. Cela permet d'améliorer la disponibilité et la scalabilité de l'application.
