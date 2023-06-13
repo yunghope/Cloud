@@ -12,7 +12,7 @@ docker-compose down
 
 
 ---
-### Crée ou prendre un projet en utilisant Docker-compose afin de déployer les différents conteneurs en même temps et manière automatisé
+### Crée ou prendre un projet en utilisant Docker-compose afin de déployer les différents conteneurs en même temps et manière automatisé. Rajout d'un load balancing + Reverse-proxy en local
 
 ##### Images docker - Dealabs-scrapper-app (Sélecteur des meilleurs deals de dealabs)
 
@@ -21,15 +21,29 @@ docker-compose down
 - Création du docker-compose.yml dans le dossier du projet Dealabs-scrapper-app.
 ```
 version: '3.7'
+
 services:
-  app:
+  app1:
     build:
       context: .
     stdin_open: true
     tty: true
     volumes:
       - ./app:/app
-    command: server.address 0.0.0.0 --logger.level=error
+    environment:
+      - server.port=8501
+      - server.address=0.0.0.0
+
+  app2:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./app:/app
+    environment:
+      - server.port=8501
+      - server.address=0.0.0.0
 
   nginx:
     image: nginx
@@ -37,6 +51,9 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+    depends_on:
+      - app1
+      - app2
 
 ````
 
