@@ -22,18 +22,14 @@ docker-compose down
 ```
 version: '3.7'
 services:
-#Définit les services à exécuter
   app:
     build:
       context: .
     stdin_open: true
     tty: true
-#Ouvre une connexion interactive avec le conteneur
     volumes:
       - ./app:/app
-server.address 0.0.0.0 --logger.level: error
-
-##################
+    command: server.address 0.0.0.0 --logger.level=error
 
   nginx:
     image: nginx
@@ -41,6 +37,7 @@ server.address 0.0.0.0 --logger.level: error
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+
 ````
 
 #### Création du Dockerfile
